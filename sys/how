@@ -51,7 +51,7 @@ else
 fi
 
 # find filetype of file
-targettype=$(file -i "$target" | awk '{print $2}' | cut -f 1 -d ';')
+targettype=$(file --mime "$target" | awk '{print $2}' | cut -f 1 -d ';')
 
 # report filetype
 echo "MIME filetype: $targettype"
